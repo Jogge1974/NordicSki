@@ -1,0 +1,413 @@
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+import Toybox.Activity;
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 6; @symbol_classdef = [NordicSkiDFView,6,6,21]; @symbol_extends<0> = [WatchUi,6,30,37]; @symbol_extends<1> = [DataField,6,38,47]; ]
+class NordicSkiDFView extends WatchUi.DataField {
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 8; @position = 15; @symbol_vardef = [mValue,8,15,21]; @symbol_type<0> = [Numeric,8,25,32]; ]
+    protected
+    var mValue as Numeric;
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; ]
+    function initialize() as Void {
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_10_26_13_4_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 11 8 ]
+        symbol [ DataField %tmp.2 11 8 17 ];
+        %tmp.2 = getv ? :DataField;
+        symbol [ initialize %tmp.3 11 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 12 8 ]
+        %tmp.4 = 0.0f;
+        symbol [ mValue ? 12 8 14 ];
+        putv self :mValue %tmp.4;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_10_26_13_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 17; @symbol_functiondef = [onLayout,17,13,21]; @symbol_param<0> = [dc,17,22,24]; @symbol_param<0>_type<0> = [Dc,17,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_17_40_46_4_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 18 8 ]
+        [ "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_17_40_46_4_start" "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_17_40_46_4_stop" ]
+        %obscurityFlags.1 = local;
+        symbol [ obscurityFlags %obscurityFlags.1 18 12 26 ];
+        symbol [ DataField %tmp.2 18 29 38 ];
+        %tmp.2 = getv ? :DataField;
+        symbol [ getObscurityFlags %tmp.3 18 39 56 ];
+        %tmp.3 = getv function %tmp.2 :getObscurityFlags;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %obscurityFlags.1 %tmp.4;
+        symbol [ obscurityFlags %obscurityFlags.1 18 12 26 ];
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 21 8 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_stmt:
+        %tmp.5 = lgetv %obscurityFlags.1;
+        symbol [ obscurityFlags %tmp.5 21 12 26 ];
+        symbol [ OBSCURE_TOP %tmp.7 21 31 42 ];
+        %tmp.7 = getv ? :OBSCURE_TOP;
+        symbol [ OBSCURE_LEFT %tmp.9 21 45 57 ];
+        %tmp.9 = getv ? :OBSCURE_LEFT;
+        %tmp.10 = bitor %tmp.7 %tmp.9;
+        %tmp.11 = eq %tmp.5 %tmp.10;
+        bf %tmp.11 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_60_25_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 22 12 ]
+        symbol [ View %tmp.13 22 12 16 ];
+        %tmp.13 = getv ? :View;
+        symbol [ setLayout %tmp.14 22 17 26 ];
+        %tmp.14 = getv function %tmp.13 :setLayout;
+        symbol [ Rez %tmp.16 22 27 30 ];
+        %tmp.16 = getv ? :Rez;
+        symbol [ Layouts %tmp.17 22 31 38 ];
+        %tmp.17 = getv %tmp.16 :Layouts;
+        symbol [ TopLeftLayout %tmp.18 22 39 52 ];
+        %tmp.18 = getv function %tmp.17 :TopLeftLayout;
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 22 53 55 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        invoke %tmp.13 %tmp.14(%tmp.20);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_60_25_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_false:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 25 15 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_stmt:
+        %tmp.21 = lgetv %obscurityFlags.1;
+        symbol [ obscurityFlags %tmp.21 25 19 33 ];
+        symbol [ OBSCURE_TOP %tmp.23 25 38 49 ];
+        %tmp.23 = getv ? :OBSCURE_TOP;
+        symbol [ OBSCURE_RIGHT %tmp.25 25 52 65 ];
+        %tmp.25 = getv ? :OBSCURE_RIGHT;
+        %tmp.26 = bitor %tmp.23 %tmp.25;
+        %tmp.27 = eq %tmp.21 %tmp.26;
+        bf %tmp.27 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_68_29_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 26 12 ]
+        symbol [ View %tmp.29 26 12 16 ];
+        %tmp.29 = getv ? :View;
+        symbol [ setLayout %tmp.30 26 17 26 ];
+        %tmp.30 = getv function %tmp.29 :setLayout;
+        symbol [ Rez %tmp.32 26 27 30 ];
+        %tmp.32 = getv ? :Rez;
+        symbol [ Layouts %tmp.33 26 31 38 ];
+        %tmp.33 = getv %tmp.32 :Layouts;
+        symbol [ TopRightLayout %tmp.34 26 39 53 ];
+        %tmp.34 = getv function %tmp.33 :TopRightLayout;
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 26 54 56 ];
+        %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+        invoke %tmp.29 %tmp.30(%tmp.36);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_68_29_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_false:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 29 15 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_stmt:
+        %tmp.37 = lgetv %obscurityFlags.1;
+        symbol [ obscurityFlags %tmp.37 29 19 33 ];
+        symbol [ OBSCURE_BOTTOM %tmp.39 29 38 52 ];
+        %tmp.39 = getv ? :OBSCURE_BOTTOM;
+        symbol [ OBSCURE_LEFT %tmp.41 29 55 67 ];
+        %tmp.41 = getv ? :OBSCURE_LEFT;
+        %tmp.42 = bitor %tmp.39 %tmp.41;
+        %tmp.43 = eq %tmp.37 %tmp.42;
+        bf %tmp.43 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_70_33_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 30 12 ]
+        symbol [ View %tmp.45 30 12 16 ];
+        %tmp.45 = getv ? :View;
+        symbol [ setLayout %tmp.46 30 17 26 ];
+        %tmp.46 = getv function %tmp.45 :setLayout;
+        symbol [ Rez %tmp.48 30 27 30 ];
+        %tmp.48 = getv ? :Rez;
+        symbol [ Layouts %tmp.49 30 31 38 ];
+        %tmp.49 = getv %tmp.48 :Layouts;
+        symbol [ BottomLeftLayout %tmp.50 30 39 55 ];
+        %tmp.50 = getv function %tmp.49 :BottomLeftLayout;
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 30 56 58 ];
+        %tmp.52 = invoke %tmp.49 %tmp.50(%tmp.51);
+        invoke %tmp.45 %tmp.46(%tmp.52);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_70_33_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_false:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 33 15 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_stmt:
+        %tmp.53 = lgetv %obscurityFlags.1;
+        symbol [ obscurityFlags %tmp.53 33 19 33 ];
+        symbol [ OBSCURE_BOTTOM %tmp.55 33 38 52 ];
+        %tmp.55 = getv ? :OBSCURE_BOTTOM;
+        symbol [ OBSCURE_RIGHT %tmp.57 33 55 68 ];
+        %tmp.57 = getv ? :OBSCURE_RIGHT;
+        %tmp.58 = bitor %tmp.55 %tmp.57;
+        %tmp.59 = eq %tmp.53 %tmp.58;
+        bf %tmp.59 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_else_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_71_37_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 34 12 ]
+        symbol [ View %tmp.61 34 12 16 ];
+        %tmp.61 = getv ? :View;
+        symbol [ setLayout %tmp.62 34 17 26 ];
+        %tmp.62 = getv function %tmp.61 :setLayout;
+        symbol [ Rez %tmp.64 34 27 30 ];
+        %tmp.64 = getv ? :Rez;
+        symbol [ Layouts %tmp.65 34 31 38 ];
+        %tmp.65 = getv %tmp.64 :Layouts;
+        symbol [ BottomRightLayout %tmp.66 34 39 56 ];
+        %tmp.66 = getv function %tmp.65 :BottomRightLayout;
+        %tmp.67 = lgetv %dc;
+        symbol [ dc %tmp.67 34 57 59 ];
+        %tmp.68 = invoke %tmp.65 %tmp.66(%tmp.67);
+        invoke %tmp.61 %tmp.62(%tmp.68);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_71_37_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_else_false:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 38 12 ]
+        symbol [ View %tmp.70 38 12 16 ];
+        %tmp.70 = getv ? :View;
+        symbol [ setLayout %tmp.71 38 17 26 ];
+        %tmp.71 = getv function %tmp.70 :setLayout;
+        symbol [ Rez %tmp.73 38 27 30 ];
+        %tmp.73 = getv ? :Rez;
+        symbol [ Layouts %tmp.74 38 31 38 ];
+        %tmp.74 = getv %tmp.73 :Layouts;
+        symbol [ MainLayout %tmp.75 38 39 49 ];
+        %tmp.75 = getv function %tmp.74 :MainLayout;
+        %tmp.76 = lgetv %dc;
+        symbol [ dc %tmp.76 38 50 52 ];
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        invoke %tmp.70 %tmp.71(%tmp.77);
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 39 12 ]
+        [ "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_start" "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_stop" ]
+        %labelView.2 = local;
+        symbol [ labelView %labelView.2 39 16 25 ];
+        symbol [ View %tmp.79 39 28 32 ];
+        %tmp.79 = getv ? :View;
+        symbol [ findDrawableById %tmp.80 39 33 49 ];
+        %tmp.80 = getv function %tmp.79 :findDrawableById;
+        %tmp.81 = "label";
+        %tmp.82 = invoke %tmp.79 %tmp.80(%tmp.81);
+        %tmp.83 = as %tmp.82 Text;
+        symbol [ Text %tmp.83 39 62 66 ];
+        lputv %labelView.2 %tmp.83;
+        symbol [ labelView %labelView.2 39 16 25 ];
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 40 12 ]
+        %tmp.84 = lgetv %labelView.2;
+        symbol [ labelView %tmp.84 40 12 21 ];
+        %tmp.85 = lgetv %labelView.2;
+        symbol [ labelView %tmp.85 40 29 38 ];
+        symbol [ locY %tmp.86 40 39 43 ];
+        %tmp.86 = getv %tmp.85 :locY;
+        %tmp.87 = 16;
+        %tmp.88 = sub %tmp.86 %tmp.87;
+        symbol [ locY ? 40 22 26 ];
+        putv %tmp.84 :locY %tmp.88;
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 41 12 ]
+        [ "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_start" "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_stop" ]
+        %valueView.3 = local;
+        symbol [ valueView %valueView.3 41 16 25 ];
+        symbol [ View %tmp.90 41 28 32 ];
+        %tmp.90 = getv ? :View;
+        symbol [ findDrawableById %tmp.91 41 33 49 ];
+        %tmp.91 = getv function %tmp.90 :findDrawableById;
+        %tmp.92 = "value";
+        %tmp.93 = invoke %tmp.90 %tmp.91(%tmp.92);
+        %tmp.94 = as %tmp.93 Text;
+        symbol [ Text %tmp.94 41 62 66 ];
+        lputv %valueView.3 %tmp.94;
+        symbol [ valueView %valueView.3 41 16 25 ];
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 42 12 ]
+        %tmp.95 = lgetv %valueView.3;
+        symbol [ valueView %tmp.95 42 12 21 ];
+        %tmp.96 = lgetv %valueView.3;
+        symbol [ valueView %tmp.96 42 29 38 ];
+        symbol [ locY %tmp.97 42 39 43 ];
+        %tmp.97 = getv %tmp.96 :locY;
+        %tmp.98 = 7;
+        %tmp.99 = add %tmp.97 %tmp.98;
+        symbol [ locY ? 42 22 26 ];
+        putv %tmp.95 :locY %tmp.99;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_37_15_43_8_stop:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_33_15_43_8_if_end:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_29_15_43_8_if_end:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_25_15_43_8_if_end:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_21_8_43_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 45 8 ]
+        symbol [ View %tmp.101 45 9 13 ];
+        %tmp.101 = getv ? :View;
+        symbol [ findDrawableById %tmp.102 45 14 30 ];
+        %tmp.102 = getv function %tmp.101 :findDrawableById;
+        %tmp.103 = "label";
+        %tmp.104 = invoke %tmp.101 %tmp.102(%tmp.103);
+        %tmp.105 = as %tmp.104 Text;
+        symbol [ Text %tmp.105 45 43 47 ];
+        symbol [ setText %tmp.106 45 49 56 ];
+        %tmp.106 = getv function %tmp.105 :setText;
+        symbol [ Rez %tmp.108 45 57 60 ];
+        %tmp.108 = getv ? :Rez;
+        symbol [ Strings %tmp.109 45 61 68 ];
+        %tmp.109 = getv %tmp.108 :Strings;
+        symbol [ label %tmp.110 45 69 74 ];
+        %tmp.110 = getv %tmp.109 :label;
+        invoke %tmp.105 %tmp.106(%tmp.110);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_17_40_46_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 52; @symbol_functiondef = [compute,52,13,20]; @symbol_param<0> = [info,52,21,25]; @symbol_param<0>_type<0> = [Activity,52,29,37]; @symbol_param<0>_type<1> = [Info,52,38,42]; ]
+    function compute(info as Activity.Info) as Void {
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_52_52_61_4_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 54 8 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_8_60_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 54 11 15 ];
+        %tmp.3 = const :currentHeartRate;
+        symbol [ currentHeartRate %tmp.3 54 21 37 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_8_60_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_8_60_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_38_60_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 55 12 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_stmt:
+        %tmp.5 = lgetv %info;
+        symbol [ info %tmp.5 55 15 19 ];
+        %tmp.6 = as %tmp.5 { (interface { var currentHeartRate; }) };
+        symbol [ currentHeartRate %tmp.7 55 20 36 ];
+        %tmp.7 = getv %tmp.6 :currentHeartRate;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_else_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_45_57_12_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 56 16 ]
+        %tmp.10 = lgetv %info;
+        symbol [ info %tmp.10 56 25 29 ];
+        %tmp.11 = as %tmp.10 { (interface { var currentHeartRate; }) };
+        symbol [ currentHeartRate %tmp.12 56 30 46 ];
+        %tmp.12 = getv %tmp.11 :currentHeartRate;
+        %tmp.13 = as %tmp.12 Number;
+        symbol [ Number %tmp.13 56 50 56 ];
+        symbol [ mValue ? 56 16 22 ];
+        putv self :mValue %tmp.13;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_45_57_12_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_else_false:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_57_19_59_12_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 58 16 ]
+        %tmp.14 = 0.0f;
+        symbol [ mValue ? 58 16 22 ];
+        putv self :mValue %tmp.14;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_57_19_59_12_stop:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_55_12_59_12_if_end:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_38_60_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_8_60_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_54_8_60_8_if_end:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_52_52_61_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 65; @symbol_functiondef = [onUpdate,65,13,21]; @symbol_param<0> = [dc,65,22,24]; @symbol_param<0>_type<0> = [Dc,65,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_65_40_80_4_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 67 8 ]
+        symbol [ View %tmp.2 67 9 13 ];
+        %tmp.2 = getv ? :View;
+        symbol [ findDrawableById %tmp.3 67 14 30 ];
+        %tmp.3 = getv function %tmp.2 :findDrawableById;
+        %tmp.4 = "Background";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 Text;
+        symbol [ Text %tmp.6 67 48 52 ];
+        symbol [ setColor %tmp.7 67 54 62 ];
+        %tmp.7 = getv function %tmp.6 :setColor;
+        %tmp.8 = self;
+        symbol [ getBackgroundColor %tmp.9 67 63 81 ];
+        %tmp.9 = getv function %tmp.8 :getBackgroundColor;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        invoke %tmp.6 %tmp.7(%tmp.10);
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 70 8 ]
+        [ "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_65_40_80_4_start" "C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_65_40_80_4_stop" ]
+        %value.1 = local;
+        symbol [ value %value.1 70 12 17 ];
+        symbol [ View %tmp.12 70 20 24 ];
+        %tmp.12 = getv ? :View;
+        symbol [ findDrawableById %tmp.13 70 25 41 ];
+        %tmp.13 = getv function %tmp.12 :findDrawableById;
+        %tmp.14 = "value";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        %tmp.16 = as %tmp.15 Text;
+        symbol [ Text %tmp.16 70 54 58 ];
+        lputv %value.1 %tmp.16;
+        symbol [ value %value.1 70 12 17 ];
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 71 8 ]
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_stmt:
+        %tmp.17 = self;
+        symbol [ getBackgroundColor %tmp.18 71 12 30 ];
+        %tmp.18 = getv function %tmp.17 :getBackgroundColor;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        symbol [ Graphics %tmp.20 71 36 44 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.21 71 45 56 ];
+        %tmp.21 = getv %tmp.20 :COLOR_BLACK;
+        %tmp.22 = eq %tmp.19 %tmp.21;
+        bf %tmp.22 @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_else_false;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_true:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_58_73_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 72 12 ]
+        %tmp.23 = lgetv %value.1;
+        symbol [ value %tmp.23 72 12 17 ];
+        symbol [ setColor %tmp.24 72 18 26 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 72 27 35 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.26 72 36 47 ];
+        %tmp.26 = getv %tmp.25 :COLOR_WHITE;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_58_73_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_end;
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_else_false:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_73_15_75_8_start:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 74 12 ]
+        %tmp.27 = lgetv %value.1;
+        symbol [ value %tmp.27 74 12 17 ];
+        symbol [ setColor %tmp.28 74 18 26 ];
+        %tmp.28 = getv function %tmp.27 :setColor;
+        symbol [ Graphics %tmp.29 74 27 35 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.30 74 36 47 ];
+        %tmp.30 = getv %tmp.29 :COLOR_BLACK;
+        invoke %tmp.27 %tmp.28(%tmp.30);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_73_15_75_8_stop:
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_71_8_75_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 76 8 ]
+        %tmp.31 = lgetv %value.1;
+        symbol [ value %tmp.31 76 8 13 ];
+        symbol [ setText %tmp.32 76 14 21 ];
+        %tmp.32 = getv function %tmp.31 :setText;
+        symbol [ mValue %tmp.34 76 22 28 ];
+        %tmp.34 = getv ? :mValue;
+        symbol [ format %tmp.35 76 29 35 ];
+        %tmp.35 = getv function %tmp.34 :format;
+        %tmp.36 = "%.2f";
+        %tmp.37 = invoke %tmp.34 %tmp.35(%tmp.36);
+        invoke %tmp.31 %tmp.32(%tmp.37);
+[ "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc" 79 8 ]
+        symbol [ View %tmp.39 79 8 12 ];
+        %tmp.39 = getv ? :View;
+        symbol [ onUpdate %tmp.40 79 13 21 ];
+        %tmp.40 = getv function %tmp.39 :onUpdate;
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 79 22 24 ];
+        invoke %tmp.39 %tmp.40(%tmp.41);
+C__Workspace_Garmin_NordicSki_datafield2_NordicSkiDF_source_NordicSkiDFView_mc_65_40_80_4_stop:
+    }
+}
+[ @file = "C:\Workspace\Garmin\NordicSki\datafield2\NordicSkiDF\source\NordicSkiDFView.mc"; @line = 1; ]
+<init> {
+}

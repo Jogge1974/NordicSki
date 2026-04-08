@@ -1,0 +1,729 @@
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 5; @symbol_classdef = [ConfirmDeleteView,5,6,23]; @symbol_extends<0> = [WatchUi,5,32,39]; @symbol_extends<1> = [View,5,40,44]; ]
+class ConfirmDeleteView extends WatchUi.View {
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 5; ]
+    <init> {
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 10 8 ]
+        symbol [ OPTION_NO %tmp.2 10 20 29 ];
+        %tmp.2 = getv ? :OPTION_NO;
+        putv self :_selected %tmp.2;
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 7; @position = 10; @symbol_constdef = [OPTION_YES,7,10,20]; ]
+    const OPTION_YES = 0;
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 8; @position = 10; @symbol_constdef = [OPTION_NO,8,10,19]; ]
+    const OPTION_NO = 1;
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 10; @position = 8; @symbol_vardef = [_selected,10,8,17]; ]
+    var _selected;
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 11; @position = 8; @symbol_vardef = [_sessionView,11,8,20]; ]
+    var _sessionView;
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [sessionView,13,24,35]; @symbol_param<0>_type<0> = [SessionView,13,39,50]; ]
+    function initialize(sessionView as SessionView) as Void {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_13_52_17_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 14 8 ]
+        symbol [ View %tmp.2 14 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 14 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 15 8 ]
+        %tmp.4 = lgetv %sessionView;
+        symbol [ sessionView %tmp.4 15 23 34 ];
+        symbol [ _sessionView ? 15 8 20 ];
+        putv self :_sessionView %tmp.4;
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 16 8 ]
+        symbol [ System %tmp.5 16 8 14 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ println %tmp.6 16 15 22 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "ConfirmDeleteView: initialize";
+        invoke %tmp.5 %tmp.6(%tmp.7);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_13_52_17_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 19; @symbol_functiondef = [onShow,19,13,19]; ]
+    function onShow() as Void {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_19_30_21_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 20 8 ]
+        symbol [ System %tmp.1 20 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 20 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "ConfirmDeleteView: onShow";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_19_30_21_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 23; @symbol_functiondef = [onUpdate,23,13,21]; @symbol_param<0> = [dc,23,22,24]; @symbol_param<0>_type<0> = [Dc,23,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 24 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 24 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 24 20 22 ];
+        symbol [ getWidth %tmp.2 24 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 24 12 17 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 25 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 25 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 25 21 23 ];
+        symbol [ getHeight %tmp.5 25 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 25 12 18 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 26 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_stop" ]
+        %rowHeight.3 = local;
+        symbol [ rowHeight %rowHeight.3 26 12 21 ];
+        %tmp.7 = lgetv %height.2;
+        symbol [ height %tmp.7 26 24 30 ];
+        %tmp.8 = 3;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %rowHeight.3 %tmp.9;
+        symbol [ rowHeight %rowHeight.3 26 12 21 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 28 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 28 8 10 ];
+        symbol [ setColor %tmp.11 28 11 19 ];
+        %tmp.11 = getv function %tmp.10 :setColor;
+        symbol [ Graphics %tmp.12 28 20 28 ];
+        %tmp.12 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.13 28 29 40 ];
+        %tmp.13 = getv %tmp.12 :COLOR_WHITE;
+        symbol [ Graphics %tmp.14 28 42 50 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.15 28 51 62 ];
+        %tmp.15 = getv %tmp.14 :COLOR_WHITE;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 29 8 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 29 8 10 ];
+        symbol [ clear %tmp.17 29 11 16 ];
+        %tmp.17 = getv function %tmp.16 :clear;
+        invoke %tmp.16 %tmp.17();
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 30 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 30 8 10 ];
+        symbol [ setColor %tmp.19 30 11 19 ];
+        %tmp.19 = getv function %tmp.18 :setColor;
+        symbol [ Graphics %tmp.20 30 20 28 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.21 30 29 40 ];
+        %tmp.21 = getv %tmp.20 :COLOR_BLACK;
+        symbol [ Graphics %tmp.22 30 42 50 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.23 30 51 62 ];
+        %tmp.23 = getv %tmp.22 :COLOR_WHITE;
+        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 32 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 32 8 10 ];
+        symbol [ drawText %tmp.25 32 11 19 ];
+        %tmp.25 = getv function %tmp.24 :drawText;
+        %tmp.26 = lgetv %width.1;
+        symbol [ width %tmp.26 33 12 17 ];
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = lgetv %rowHeight.3;
+        symbol [ rowHeight %tmp.29 34 12 21 ];
+        %tmp.30 = 2;
+        %tmp.31 = div %tmp.29 %tmp.30;
+        symbol [ Graphics %tmp.32 35 12 20 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.33 35 21 31 ];
+        %tmp.33 = getv %tmp.32 :FONT_SMALL;
+        %tmp.34 = self;
+        symbol [ s %tmp.35 36 12 13 ];
+        %tmp.35 = getv function %tmp.34 :s;
+        symbol [ Rez %tmp.37 36 14 17 ];
+        %tmp.37 = getv ? :Rez;
+        symbol [ Strings %tmp.38 36 18 25 ];
+        %tmp.38 = getv %tmp.37 :Strings;
+        symbol [ confirm_title %tmp.39 36 26 39 ];
+        %tmp.39 = getv %tmp.38 :confirm_title;
+        %tmp.40 = invoke %tmp.34 %tmp.35(%tmp.39);
+        symbol [ Graphics %tmp.41 37 12 20 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.42 37 21 40 ];
+        %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.43 37 43 51 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.44 37 52 72 ];
+        %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_VCENTER;
+        %tmp.45 = bitor %tmp.42 %tmp.44;
+        invoke %tmp.24 %tmp.25(%tmp.28, %tmp.31, %tmp.33, %tmp.40, %tmp.45);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 40 8 ]
+        %tmp.46 = self;
+        symbol [ drawOption %tmp.47 40 8 18 ];
+        %tmp.47 = getv function %tmp.46 :drawOption;
+        %tmp.48 = lgetv %dc;
+        symbol [ dc %tmp.48 40 19 21 ];
+        %tmp.49 = 1;
+        %tmp.50 = lgetv %rowHeight.3;
+        symbol [ rowHeight %tmp.50 40 26 35 ];
+        %tmp.51 = self;
+        symbol [ s %tmp.52 40 37 38 ];
+        %tmp.52 = getv function %tmp.51 :s;
+        symbol [ Rez %tmp.54 40 39 42 ];
+        %tmp.54 = getv ? :Rez;
+        symbol [ Strings %tmp.55 40 43 50 ];
+        %tmp.55 = getv %tmp.54 :Strings;
+        symbol [ confirm_yes %tmp.56 40 51 62 ];
+        %tmp.56 = getv %tmp.55 :confirm_yes;
+        %tmp.57 = invoke %tmp.51 %tmp.52(%tmp.56);
+        symbol [ OPTION_YES %tmp.59 40 65 75 ];
+        %tmp.59 = getv ? :OPTION_YES;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.50, %tmp.57, %tmp.59);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 41 8 ]
+        %tmp.60 = self;
+        symbol [ drawOption %tmp.61 41 8 18 ];
+        %tmp.61 = getv function %tmp.60 :drawOption;
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 41 19 21 ];
+        %tmp.63 = 2;
+        %tmp.64 = lgetv %rowHeight.3;
+        symbol [ rowHeight %tmp.64 41 26 35 ];
+        %tmp.65 = self;
+        symbol [ s %tmp.66 41 37 38 ];
+        %tmp.66 = getv function %tmp.65 :s;
+        symbol [ Rez %tmp.68 41 39 42 ];
+        %tmp.68 = getv ? :Rez;
+        symbol [ Strings %tmp.69 41 43 50 ];
+        %tmp.69 = getv %tmp.68 :Strings;
+        symbol [ confirm_no %tmp.70 41 51 61 ];
+        %tmp.70 = getv %tmp.69 :confirm_no;
+        %tmp.71 = invoke %tmp.65 %tmp.66(%tmp.70);
+        symbol [ OPTION_NO %tmp.73 41 64 73 ];
+        %tmp.73 = getv ? :OPTION_NO;
+        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63, %tmp.64, %tmp.71, %tmp.73);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_23_40_42_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 44; @symbol_functiondef = [onKey,44,13,18]; @symbol_param<0> = [keyEvent,44,19,27]; ]
+    function onKey(keyEvent) {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 45 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_stop" ]
+        %key.1 = local;
+        symbol [ key %key.1 45 12 15 ];
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 45 18 26 ];
+        symbol [ getKey %tmp.2 45 27 33 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+        symbol [ key %key.1 45 12 15 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 46 8 ]
+        symbol [ System %tmp.4 46 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 46 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "ConfirmDeleteView: key pressed key=";
+        %tmp.7 = lgetv %key.1;
+        symbol [ key %tmp.7 46 63 66 ];
+        %tmp.8 = add %tmp.6 %tmp.7;
+        invoke %tmp.4 %tmp.5(%tmp.8);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 48 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_stmt:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_12_48_52_begin:
+        %tmp.9 = lgetv %key.1;
+        symbol [ key %tmp.9 48 12 15 ];
+        symbol [ WatchUi %tmp.10 48 19 26 ];
+        %tmp.10 = getm $.Toybox.WatchUi;
+        symbol [ KEY_UP %tmp.11 48 27 33 ];
+        %tmp.11 = getv %tmp.10 :KEY_UP;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        bt %tmp.12 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_true;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_37_48_52_false:
+        %tmp.13 = lgetv %key.1;
+        symbol [ key %tmp.13 48 37 40 ];
+        symbol [ WatchUi %tmp.14 48 44 51 ];
+        %tmp.14 = getm $.Toybox.WatchUi;
+        symbol [ KEY_DOWN %tmp.15 48 52 60 ];
+        %tmp.15 = getv %tmp.14 :KEY_DOWN;
+        %tmp.16 = eq %tmp.13 %tmp.15;
+        push %tmp.16;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_37_48_52_end:
+        %tmp.17 = phi [%tmp.12 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_12_48_52_begin] [%tmp.16 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_37_48_52_false] [%tmp.17 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_37_48_52_end];
+        bf %tmp.17 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_62_56_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 49 12 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_62_56_8_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_62_56_8_stop" ]
+        %previous.2 = local;
+        symbol [ previous %previous.2 49 16 24 ];
+        symbol [ _selected %tmp.19 49 27 36 ];
+        %tmp.19 = getv ? :_selected;
+        lputv %previous.2 %tmp.19;
+        symbol [ previous %previous.2 49 16 24 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 50 12 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_begin:
+        symbol [ _selected %tmp.21 50 25 34 ];
+        %tmp.21 = getv ? :_selected;
+        symbol [ OPTION_YES %tmp.23 50 38 48 ];
+        %tmp.23 = getv ? :OPTION_YES;
+        %tmp.24 = eq %tmp.21 %tmp.23;
+        bf %tmp.24 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_else_false;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_true:
+        symbol [ OPTION_NO %tmp.26 50 52 61 ];
+        %tmp.26 = getv ? :OPTION_NO;
+        push %tmp.26;
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_else_false:
+        symbol [ OPTION_YES %tmp.28 50 64 74 ];
+        %tmp.28 = getv ? :OPTION_YES;
+        push %tmp.28;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_end:
+        %tmp.29 = phi [%tmp.24 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_begin] [%tmp.26 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_true] [%tmp.28 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_else_false] [%tmp.29 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_50_24_50_64_end];
+        symbol [ _selected ? 50 12 21 ];
+        putv self :_selected %tmp.29;
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 51 12 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_12_54_12_if_stmt:
+        %tmp.30 = lgetv %previous.2;
+        symbol [ previous %tmp.30 51 16 24 ];
+        symbol [ _selected %tmp.32 51 28 37 ];
+        %tmp.32 = getv ? :_selected;
+        %tmp.33 = ne %tmp.30 %tmp.32;
+        bf %tmp.33 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_12_54_12_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_12_54_12_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_39_54_12_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 52 16 ]
+        symbol [ System %tmp.34 52 16 22 ];
+        %tmp.34 = getm $.Toybox.System;
+        symbol [ println %tmp.35 52 23 30 ];
+        %tmp.35 = getv function %tmp.34 :println;
+        %tmp.36 = "ConfirmDeleteView: selection -> ";
+        %tmp.37 = self;
+        symbol [ getSelectedLabel %tmp.38 52 68 84 ];
+        %tmp.38 = getv function %tmp.37 :getSelectedLabel;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = add %tmp.36 %tmp.39;
+        invoke %tmp.34 %tmp.35(%tmp.40);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 53 16 ]
+        symbol [ WatchUi %tmp.41 53 16 23 ];
+        %tmp.41 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.42 53 24 37 ];
+        %tmp.42 = getv function %tmp.41 :requestUpdate;
+        invoke %tmp.41 %tmp.42();
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_39_54_12_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_12_54_12_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_51_12_54_12_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 55 12 ]
+        %tmp.43 = true;
+        ret %tmp.43;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_62_56_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_48_8_56_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 58 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_stop" ]
+        %isStart.3 = local;
+        symbol [ isStart %isStart.3 58 12 19 ];
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_23_58_70_begin:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_23_58_58_begin:
+        %tmp.44 = lgetv %key.1;
+        symbol [ key %tmp.44 58 23 26 ];
+        symbol [ WatchUi %tmp.45 58 30 37 ];
+        %tmp.45 = getm $.Toybox.WatchUi;
+        symbol [ KEY_START %tmp.46 58 38 47 ];
+        %tmp.46 = getv %tmp.45 :KEY_START;
+        %tmp.47 = eq %tmp.44 %tmp.46;
+        %tmp.48 = dup %tmp.47;
+        bt %tmp.48 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_51_58_58_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_51_58_58_false:
+        %tmp.49 = lgetv %key.1;
+        symbol [ key %tmp.49 58 51 54 ];
+        %tmp.50 = 4;
+        %tmp.51 = eq %tmp.49 %tmp.50;
+        %tmp.52 = or %tmp.47 %tmp.51;
+        push %tmp.52;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_51_58_58_end:
+        %tmp.53 = phi [%tmp.48 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_23_58_58_begin] [%tmp.52 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_51_58_58_false] [%tmp.53 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_51_58_58_end];
+        %tmp.54 = dup %tmp.53;
+        bt %tmp.54 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_63_58_70_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_63_58_70_false:
+        %tmp.55 = lgetv %key.1;
+        symbol [ key %tmp.55 58 63 66 ];
+        %tmp.56 = 5;
+        %tmp.57 = eq %tmp.55 %tmp.56;
+        %tmp.58 = or %tmp.53 %tmp.57;
+        push %tmp.58;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_63_58_70_end:
+        %tmp.59 = phi [%tmp.54 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_23_58_70_begin] [%tmp.58 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_63_58_70_false] [%tmp.59 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_58_63_58_70_end];
+        lputv %isStart.3 %tmp.59;
+        symbol [ isStart %isStart.3 58 12 19 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 59 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_stmt:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_12_59_67_begin:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_12_59_47_begin:
+        %tmp.60 = lgetv %isStart.3;
+        symbol [ isStart %tmp.60 59 13 20 ];
+        %tmp.61 = not %tmp.60;
+        bf %tmp.61 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_24_59_47_true:
+        symbol [ WatchUi %tmp.62 59 25 32 ];
+        %tmp.62 = getm $.Toybox.WatchUi;
+        %tmp.64 = const :KEY_ENTER;
+        symbol [ KEY_ENTER %tmp.64 59 38 47 const ];
+        %tmp.65 = canhazplz %tmp.62 %tmp.64;
+        push %tmp.65;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_24_59_47_end:
+        %tmp.66 = phi [%tmp.61 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_12_59_47_begin] [%tmp.65 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_24_59_47_true] [%tmp.66 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_24_59_47_end];
+        bf %tmp.66 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_52_59_67_true:
+        %tmp.67 = lgetv %key.1;
+        symbol [ key %tmp.67 59 52 55 ];
+        symbol [ WatchUi %tmp.68 59 59 66 ];
+        %tmp.68 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ENTER %tmp.69 59 67 76 ];
+        %tmp.69 = getv %tmp.68 :KEY_ENTER;
+        %tmp.70 = eq %tmp.67 %tmp.69;
+        push %tmp.70;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_52_59_67_end:
+        %tmp.71 = phi [%tmp.66 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_12_59_67_begin] [%tmp.70 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_52_59_67_true] [%tmp.71 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_52_59_67_end];
+        bf %tmp.71 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_78_61_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 60 12 ]
+        %tmp.72 = true;
+        lputv %isStart.3 %tmp.72;
+        symbol [ isStart %isStart.3 60 12 19 ];
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_78_61_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_59_8_61_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 63 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_8_72_8_if_stmt:
+        %tmp.73 = lgetv %isStart.3;
+        symbol [ isStart %tmp.73 63 12 19 ];
+        bf %tmp.73 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_8_72_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_8_72_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_21_72_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 64 12 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_stmt:
+        symbol [ _selected %tmp.75 64 16 25 ];
+        %tmp.75 = getv ? :_selected;
+        symbol [ OPTION_YES %tmp.77 64 29 39 ];
+        %tmp.77 = getv ? :OPTION_YES;
+        %tmp.78 = eq %tmp.75 %tmp.77;
+        bf %tmp.78 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_else_false;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_41_67_12_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 65 16 ]
+        symbol [ System %tmp.79 65 16 22 ];
+        %tmp.79 = getm $.Toybox.System;
+        symbol [ println %tmp.80 65 23 30 ];
+        %tmp.80 = getv function %tmp.79 :println;
+        %tmp.81 = "ConfirmDeleteView: Yes selected -> delete";
+        invoke %tmp.79 %tmp.80(%tmp.81);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 66 16 ]
+        symbol [ _sessionView %tmp.83 66 16 28 ];
+        %tmp.83 = getv ? :_sessionView;
+        symbol [ discardSessionAndExit %tmp.84 66 29 50 ];
+        %tmp.84 = getv function %tmp.83 :discardSessionAndExit;
+        invoke %tmp.83 %tmp.84();
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_41_67_12_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_else_false:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_67_19_70_12_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 68 16 ]
+        symbol [ System %tmp.85 68 16 22 ];
+        %tmp.85 = getm $.Toybox.System;
+        symbol [ println %tmp.86 68 23 30 ];
+        %tmp.86 = getv function %tmp.85 :println;
+        %tmp.87 = "ConfirmDeleteView: No selected -> back to EndSessionView";
+        invoke %tmp.85 %tmp.86(%tmp.87);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 69 16 ]
+        symbol [ WatchUi %tmp.88 69 16 23 ];
+        %tmp.88 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.89 69 24 31 ];
+        %tmp.89 = getv function %tmp.88 :popView;
+        symbol [ WatchUi %tmp.90 69 32 39 ];
+        %tmp.90 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.91 69 40 55 ];
+        %tmp.91 = getv %tmp.90 :SLIDE_IMMEDIATE;
+        invoke %tmp.88 %tmp.89(%tmp.91);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_67_19_70_12_stop:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_64_12_70_12_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 71 12 ]
+        %tmp.92 = true;
+        ret %tmp.92;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_21_72_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_8_72_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_63_8_72_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 74 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_8_78_8_if_stmt:
+        %tmp.93 = lgetv %key.1;
+        symbol [ key %tmp.93 74 12 15 ];
+        symbol [ WatchUi %tmp.94 74 19 26 ];
+        %tmp.94 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ESC %tmp.95 74 27 34 ];
+        %tmp.95 = getv %tmp.94 :KEY_ESC;
+        %tmp.96 = eq %tmp.93 %tmp.95;
+        bf %tmp.96 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_8_78_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_8_78_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_36_78_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 75 12 ]
+        symbol [ System %tmp.97 75 12 18 ];
+        %tmp.97 = getm $.Toybox.System;
+        symbol [ println %tmp.98 75 19 26 ];
+        %tmp.98 = getv function %tmp.97 :println;
+        %tmp.99 = "ConfirmDeleteView: BACK pressed -> No";
+        invoke %tmp.97 %tmp.98(%tmp.99);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 76 12 ]
+        symbol [ WatchUi %tmp.100 76 12 19 ];
+        %tmp.100 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.101 76 20 27 ];
+        %tmp.101 = getv function %tmp.100 :popView;
+        symbol [ WatchUi %tmp.102 76 28 35 ];
+        %tmp.102 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.103 76 36 51 ];
+        %tmp.103 = getv %tmp.102 :SLIDE_IMMEDIATE;
+        invoke %tmp.100 %tmp.101(%tmp.103);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 77 12 ]
+        %tmp.104 = true;
+        ret %tmp.104;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_36_78_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_8_78_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_74_8_78_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 80 8 ]
+        %tmp.105 = false;
+        ret %tmp.105;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_44_29_81_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 83; @symbol_functiondef = [drawOption,83,13,23]; @symbol_param<0> = [dc,83,24,26]; @symbol_param<0>_type<0> = [Dc,83,30,32]; @symbol_param<1> = [rowIndex,83,34,42]; @symbol_param<2> = [rowHeight,83,44,53]; @symbol_param<3> = [label,83,55,60]; @symbol_param<4> = [optionIndex,83,62,73]; ]
+    function drawOption(dc as Dc, rowIndex, rowHeight, label, optionIndex) as Void {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 84 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 84 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 84 20 22 ];
+        symbol [ getWidth %tmp.2 84 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 84 12 17 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 85 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_stop" ]
+        %y.2 = local;
+        symbol [ y %y.2 85 12 13 ];
+        %tmp.4 = lgetv %rowIndex;
+        symbol [ rowIndex %tmp.4 85 16 24 ];
+        %tmp.5 = lgetv %rowHeight;
+        symbol [ rowHeight %tmp.5 85 27 36 ];
+        %tmp.6 = mul %tmp.4 %tmp.5;
+        lputv %y.2 %tmp.6;
+        symbol [ y %y.2 85 12 13 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 86 8 ]
+        [ "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_start" "C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_stop" ]
+        %isSelected.3 = local;
+        symbol [ isSelected %isSelected.3 86 12 22 ];
+        symbol [ _selected %tmp.8 86 25 34 ];
+        %tmp.8 = getv ? :_selected;
+        %tmp.9 = lgetv %optionIndex;
+        symbol [ optionIndex %tmp.9 86 38 49 ];
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        lputv %isSelected.3 %tmp.10;
+        symbol [ isSelected %isSelected.3 86 12 22 ];
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 88 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_stmt:
+        %tmp.11 = lgetv %isSelected.3;
+        symbol [ isSelected %tmp.11 88 12 22 ];
+        bf %tmp.11 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_else_false;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_24_90_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 89 12 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 89 12 14 ];
+        symbol [ setColor %tmp.13 89 15 23 ];
+        %tmp.13 = getv function %tmp.12 :setColor;
+        symbol [ Graphics %tmp.14 89 24 32 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.15 89 33 44 ];
+        %tmp.15 = getv %tmp.14 :COLOR_BLACK;
+        symbol [ Graphics %tmp.16 89 46 54 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.17 89 55 66 ];
+        %tmp.17 = getv %tmp.16 :COLOR_BLACK;
+        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_24_90_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_else_false:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_90_15_92_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 91 12 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 91 12 14 ];
+        symbol [ setColor %tmp.19 91 15 23 ];
+        %tmp.19 = getv function %tmp.18 :setColor;
+        symbol [ Graphics %tmp.20 91 24 32 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.21 91 33 44 ];
+        %tmp.21 = getv %tmp.20 :COLOR_WHITE;
+        symbol [ Graphics %tmp.22 91 46 54 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.23 91 55 66 ];
+        %tmp.23 = getv %tmp.22 :COLOR_WHITE;
+        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_90_15_92_8_stop:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_88_8_92_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 93 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 93 8 10 ];
+        symbol [ fillRectangle %tmp.25 93 11 24 ];
+        %tmp.25 = getv function %tmp.24 :fillRectangle;
+        %tmp.26 = 0;
+        %tmp.27 = lgetv %y.2;
+        symbol [ y %tmp.27 93 28 29 ];
+        %tmp.28 = lgetv %width.1;
+        symbol [ width %tmp.28 93 31 36 ];
+        %tmp.29 = lgetv %rowHeight;
+        symbol [ rowHeight %tmp.29 93 38 47 ];
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.28, %tmp.29);
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 95 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_stmt:
+        %tmp.30 = lgetv %isSelected.3;
+        symbol [ isSelected %tmp.30 95 12 22 ];
+        bf %tmp.30 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_else_false;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_24_97_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 96 12 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 96 12 14 ];
+        symbol [ setColor %tmp.32 96 15 23 ];
+        %tmp.32 = getv function %tmp.31 :setColor;
+        symbol [ Graphics %tmp.33 96 24 32 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.34 96 33 44 ];
+        %tmp.34 = getv %tmp.33 :COLOR_WHITE;
+        symbol [ Graphics %tmp.35 96 46 54 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.36 96 55 66 ];
+        %tmp.36 = getv %tmp.35 :COLOR_BLACK;
+        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_24_97_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_else_false:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_97_15_99_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 98 12 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 98 12 14 ];
+        symbol [ setColor %tmp.38 98 15 23 ];
+        %tmp.38 = getv function %tmp.37 :setColor;
+        symbol [ Graphics %tmp.39 98 24 32 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.40 98 33 44 ];
+        %tmp.40 = getv %tmp.39 :COLOR_BLACK;
+        symbol [ Graphics %tmp.41 98 46 54 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.42 98 55 66 ];
+        %tmp.42 = getv %tmp.41 :COLOR_WHITE;
+        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_97_15_99_8_stop:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_95_8_99_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 101 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 101 8 10 ];
+        symbol [ drawText %tmp.44 101 11 19 ];
+        %tmp.44 = getv function %tmp.43 :drawText;
+        %tmp.45 = lgetv %width.1;
+        symbol [ width %tmp.45 102 12 17 ];
+        %tmp.46 = 2;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        %tmp.48 = lgetv %y.2;
+        symbol [ y %tmp.48 103 12 13 ];
+        %tmp.49 = lgetv %rowHeight;
+        symbol [ rowHeight %tmp.49 103 17 26 ];
+        %tmp.50 = 2;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        %tmp.52 = add %tmp.48 %tmp.51;
+        symbol [ Graphics %tmp.53 104 12 20 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.54 104 21 32 ];
+        %tmp.54 = getv %tmp.53 :FONT_MEDIUM;
+        %tmp.55 = lgetv %label;
+        symbol [ label %tmp.55 105 12 17 ];
+        symbol [ Graphics %tmp.56 106 12 20 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.57 106 21 40 ];
+        %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.58 106 43 51 ];
+        %tmp.58 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.59 106 52 72 ];
+        %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_VCENTER;
+        %tmp.60 = bitor %tmp.57 %tmp.59;
+        invoke %tmp.43 %tmp.44(%tmp.47, %tmp.52, %tmp.54, %tmp.55, %tmp.60);
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_83_83_108_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 110; @symbol_functiondef = [getSelectedLabel,110,13,29]; ]
+    function getSelectedLabel() {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_110_32_116_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 111 8 ]
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_8_113_8_if_stmt:
+        symbol [ _selected %tmp.2 111 12 21 ];
+        %tmp.2 = getv ? :_selected;
+        symbol [ OPTION_YES %tmp.4 111 25 35 ];
+        %tmp.4 = getv ? :OPTION_YES;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_8_113_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_8_113_8_if_true:
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_37_113_8_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 112 12 ]
+        %tmp.6 = self;
+        symbol [ s %tmp.7 112 19 20 ];
+        %tmp.7 = getv function %tmp.6 :s;
+        symbol [ Rez %tmp.9 112 21 24 ];
+        %tmp.9 = getv ? :Rez;
+        symbol [ Strings %tmp.10 112 25 32 ];
+        %tmp.10 = getv %tmp.9 :Strings;
+        symbol [ confirm_yes %tmp.11 112 33 44 ];
+        %tmp.11 = getv %tmp.10 :confirm_yes;
+        %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+        ret %tmp.12;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_37_113_8_stop:
+        goto @C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_8_113_8_if_end;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_111_8_113_8_if_end:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 115 8 ]
+        %tmp.13 = self;
+        symbol [ s %tmp.14 115 15 16 ];
+        %tmp.14 = getv function %tmp.13 :s;
+        symbol [ Rez %tmp.16 115 17 20 ];
+        %tmp.16 = getv ? :Rez;
+        symbol [ Strings %tmp.17 115 21 28 ];
+        %tmp.17 = getv %tmp.16 :Strings;
+        symbol [ confirm_no %tmp.18 115 29 39 ];
+        %tmp.18 = getv %tmp.17 :confirm_no;
+        %tmp.19 = invoke %tmp.13 %tmp.14(%tmp.18);
+        ret %tmp.19;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_110_32_116_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 118; @symbol_functiondef = [s,118,13,14]; @symbol_param<0> = [id,118,15,17]; ]
+    function s(id) {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_118_19_120_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc" 119 8 ]
+        symbol [ WatchUi %tmp.1 119 15 22 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.2 119 23 35 ];
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        %tmp.3 = lgetv %id;
+        symbol [ id %tmp.3 119 36 38 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        ret %tmp.4;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteView_mc_118_19_120_4_stop:
+    }
+}
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteView.mc"; @line = 1; ]
+<init> {
+}

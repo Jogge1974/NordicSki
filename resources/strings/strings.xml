@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">NordicSki</string>
+    <string id="session_name">Cross-Country Skiing</string>
+    <string id="prompt">Press MENU</string>
+
+    <string id="pre_gps_ready">GPS Ready!</string>
+    <string id="pre_ready_start_line1">Ready to START</string>
+    <string id="pre_waiting_gps">Waiting for GPS...</string>
+    <string id="pre_skimode_classic">Classic</string>
+    <string id="pre_skimode_skate">Skate</string>
+
+    <string id="session_label_time">Total time</string>
+    <string id="session_label_distance">Total distance</string>
+    <string id="session_label_altitude">Altitude</string>
+    <string id="session_label_clock">Clock</string>
+    <string id="session_label_ascent">Total ascent</string>
+    <string id="session_label_pulse">Pulse</string>
+    <string id="session_label_max_pulse">Max pulse</string>
+    <string id="session_label_max_speed">Max speed</string>
+    <string id="session_label_avg_speed">Avg. speed</string>
+    <string id="session_label_max_altitude">Max altitude</string>
+
+    <string id="end_option_resume">Resume</string>
+    <string id="end_option_save">Save</string>
+    <string id="end_option_delete">Delete</string>
+    <string id="end_header_paused">Activity paused</string>
+
+    <string id="confirm_title">Are you sure?</string>
+    <string id="confirm_yes">Yes</string>
+    <string id="confirm_no">No</string>
+
+    <string id="menu_label_1">Option 1</string>
+    <string id="menu_label_2">Option 2</string>
+
+</resources>

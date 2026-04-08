@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">NordicSki</string>
+    <string id="session_name">Längdskidåkning</string>
+    <string id="prompt">Tryck MENU</string>
+
+    <string id="pre_gps_ready">GPS klar!</string>
+    <string id="pre_ready_start_line1">Redo att STARTA</string>
+    <string id="pre_waiting_gps">V&#228;ntar p&#229; GPS...</string>
+    <string id="pre_skimode_classic">Klassisk stil</string>
+    <string id="pre_skimode_skate">Fristil</string>
+
+    <string id="session_label_time">Total tid</string>
+    <string id="session_label_distance">Total distans</string>
+    <string id="session_label_altitude">H&#246;jd</string>
+    <string id="session_label_clock">Klocka</string>
+    <string id="session_label_ascent">Total stigning</string>
+    <string id="session_label_pulse">Puls</string>
+    <string id="session_label_max_pulse">Max puls</string>
+    <string id="session_label_max_speed">Max fart</string>
+    <string id="session_label_avg_speed">Medelfart</string>
+    <string id="session_label_max_altitude">Max h&#246;jd</string>
+
+    <string id="end_option_resume">&#197;teruppta</string>
+    <string id="end_option_save">Spara</string>
+    <string id="end_option_delete">Radera</string>
+    <string id="end_header_paused">Aktivitet pausad</string>
+
+    <string id="confirm_title">&#196;r du s&#228;ker?</string>
+    <string id="confirm_yes">Ja</string>
+    <string id="confirm_no">Nej</string>
+
+    <string id="menu_label_1">Alternativ 1</string>
+    <string id="menu_label_2">Alternativ 2</string>
+
+</resources>

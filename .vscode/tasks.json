@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "monkeyc",
+			"device": "fr55",
+			"simulatorBuild": true,
+			"folderPath": "c:\\Workspace\\Garmin\\NordicSki",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "monkeyc: fr55"
+		}
+	]
+}

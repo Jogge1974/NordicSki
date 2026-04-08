@@ -1,0 +1,49 @@
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 4; @symbol_classdef = [ConfirmDeleteDelegate,4,6,27]; @symbol_extends<0> = [WatchUi,4,36,43]; @symbol_extends<1> = [BehaviorDelegate,4,44,60]; ]
+class ConfirmDeleteDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 6; @position = 8; @symbol_vardef = [_view,6,8,13]; ]
+    var _view;
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; @symbol_param<0> = [view,8,24,28]; @symbol_param<0>_type<0> = [ConfirmDeleteView,8,32,49]; ]
+    function initialize(view as ConfirmDeleteView) as Void {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteDelegate_mc_8_51_11_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc" 9 8 ]
+        symbol [ BehaviorDelegate %tmp.2 9 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 9 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc" 10 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 10 16 20 ];
+        symbol [ _view ? 10 8 13 ];
+        putv self :_view %tmp.4;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteDelegate_mc_8_51_11_4_stop:
+    }
+    [ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 13; @symbol_functiondef = [onKey,13,13,18]; @symbol_param<0> = [keyEvent,13,19,27]; @symbol_return<0> = [Boolean,13,32,39]; ]
+    function onKey(keyEvent) as Boolean {
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteDelegate_mc_13_40_15_4_start:
+[ "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc" 14 8 ]
+        symbol [ _view %tmp.2 14 15 20 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ onKey %tmp.3 14 21 26 ];
+        %tmp.3 = getv function %tmp.2 :onKey;
+        %tmp.4 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.4 14 27 35 ];
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        ret %tmp.5;
+C__Workspace_Garmin_NordicSki_source_ConfirmDeleteDelegate_mc_13_40_15_4_stop:
+    }
+}
+[ @file = "C:\Workspace\Garmin\NordicSki\source\ConfirmDeleteDelegate.mc"; @line = 1; ]
+<init> {
+}
