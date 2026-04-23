@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "monkeyc",
-			"device": "fr55",
+			"device": "fr955",
 			"simulatorBuild": true,
 			"folderPath": "c:\\Workspace\\Garmin\\NordicSki",
 			"group": {
@@ -11,7 +11,7 @@
 				"isDefault": true
 			},
 			"problemMatcher": [],
-			"label": "monkeyc: fr55"
+			"label": "monkeyc: fr955"
 		}
 	]
 }

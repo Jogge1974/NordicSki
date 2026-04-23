@@ -76,7 +76,15 @@ class SessionView extends WatchUi.View {
     var _trackCacheWidth as Number? = null;
     var _trackCacheHeight as Number? = null;
     var _lastTrackPointForCache as Coord? = null;
-    const TRACK_POINT_MIN_DISTANCE_M = 6.0;
+    var _trackPointMinDistanceMeters = 6.0;
+    var _trackSamplingStage = 0;
+    const TRACK_POINT_MIN_DISTANCE_STAGE_ONE_M = 6.0;
+    const TRACK_POINT_MIN_DISTANCE_STAGE_TWO_M = 50.0;
+    const TRACK_POINT_MIN_DISTANCE_STAGE_THREE_M = 100.0;
+    const TRACK_STAGE_TWO_START_SECONDS = 30 * 60;
+    const TRACK_STAGE_THREE_START_SECONDS = 60 * 60;
+    const DISTANCE_STEP_MIN_M = 0.1;
+    const DISTANCE_STEP_MAX_M = 200.0;
 
     var _counter = 0;
     var _tickcounter = 0;
@@ -172,6 +180,7 @@ class SessionView extends WatchUi.View {
                 updateDistance(info);
             }
 
+            updateTrackSamplingMode();
             updateMaxHeartRate();
             updateMaxSpeed();
 
@@ -205,6 +214,8 @@ class SessionView extends WatchUi.View {
         _trackCacheWidth = null;
         _trackCacheHeight = null;
         _lastTrackPointForCache = null;
+        _trackPointMinDistanceMeters = TRACK_POINT_MIN_DISTANCE_STAGE_ONE_M;
+        _trackSamplingStage = 0;
         _maxHeartRate = 0;
         _maxSpeedMps = 0.0;
         _maxAltitudeMeters = null;
@@ -680,7 +691,7 @@ class SessionView extends WatchUi.View {
 
         if (_lastPositionLog != null) {
             var delta = distanceBetweenCoordsMeters(_lastPositionLog, current);
-            if (delta > TRACK_POINT_MIN_DISTANCE_M && delta < 30.0) {
+            if (delta > DISTANCE_STEP_MIN_M && delta < DISTANCE_STEP_MAX_M) {
                 _totalDistanceMeters += delta;
 
                 if (!_trackStarted && _totalDistanceMeters > 10.0) {
@@ -691,8 +702,9 @@ class SessionView extends WatchUi.View {
                     updateTrackBounds(current);
                     System.println("SessionView: track started at distance=" + _totalDistanceMeters);
                 } else if (_trackStarted) {
-                    addTrackPoint(current);
-                    updateTrackBounds(current);
+                    if (addTrackPoint(current)) {
+                        updateTrackBounds(current);
+                    }
                 }
             }
         }
@@ -700,20 +712,106 @@ class SessionView extends WatchUi.View {
         _lastPositionLog = current;
     }
 
-    function addTrackPoint(point as Coord?) as Void {
+    function addTrackPoint(point as Coord?) {
         if (point == null) {
-            return;
+            return false;
         }
 
         if (_lastTrackPointForCache != null) {
             var separation = distanceBetweenCoordsMeters(_lastTrackPointForCache, point);
-            if (separation < TRACK_POINT_MIN_DISTANCE_M) {
-                return;
+            if (separation < _trackPointMinDistanceMeters) {
+                return false;
             }
         }
 
         _trackPoints.add(point);
         _lastTrackPointForCache = point;
+        _trackCacheDirty = true;
+        return true;
+    }
+
+    function updateTrackSamplingMode() as Void {
+        var elapsedSeconds = getElapsedSeconds();
+        var stage = 0;
+        var minDistance = TRACK_POINT_MIN_DISTANCE_STAGE_ONE_M;
+
+        if (elapsedSeconds >= TRACK_STAGE_THREE_START_SECONDS) {
+            stage = 2;
+            minDistance = TRACK_POINT_MIN_DISTANCE_STAGE_THREE_M;
+        } else if (elapsedSeconds >= TRACK_STAGE_TWO_START_SECONDS) {
+            stage = 1;
+            minDistance = TRACK_POINT_MIN_DISTANCE_STAGE_TWO_M;
+        }
+
+        if (stage == _trackSamplingStage && minDistance == _trackPointMinDistanceMeters) {
+            return;
+        }
+
+        _trackSamplingStage = stage;
+        _trackPointMinDistanceMeters = minDistance;
+        System.println("SessionView: track sampling changed stage=" + stage + " minDistance=" + minDistance + " elapsed=" + elapsedSeconds);
+        resampleTrackPoints(minDistance);
+    }
+
+    function resampleTrackPoints(minDistance) as Void {
+        if (_trackPoints.size() < 3) {
+            if (_trackPoints.size() > 0) {
+                _lastTrackPointForCache = _trackPoints[_trackPoints.size() - 1];
+            } else {
+                _lastTrackPointForCache = null;
+            }
+            _trackCacheDirty = true;
+            return;
+        }
+
+        var filtered = [] as Array<Coord>;
+        var kept = _trackPoints[0];
+        filtered.add(kept);
+
+        var i = 1;
+        while (i < _trackPoints.size()) {
+            var candidate = _trackPoints[i];
+            if (distanceBetweenCoordsMeters(kept, candidate) >= minDistance) {
+                filtered.add(candidate);
+                kept = candidate;
+            }
+            i += 1;
+        }
+
+        var lastPoint = _trackPoints[_trackPoints.size() - 1];
+        if (filtered[filtered.size() - 1] != lastPoint) {
+            filtered.add(lastPoint);
+        }
+
+        System.println("SessionView: resample track points from=" + _trackPoints.size() + " to=" + filtered.size() + " minDistance=" + minDistance);
+        _trackPoints = filtered;
+        rebuildTrackBoundsFromPoints();
+    }
+
+    function rebuildTrackBoundsFromPoints() as Void {
+        _trackOriginLat = null;
+        _trackOriginLon = null;
+        _trackCosOrigin = null;
+        _trackMinX = null;
+        _trackMaxX = null;
+        _trackMinY = null;
+        _trackMaxY = null;
+
+        if (_trackPoints.size() == 0) {
+            _lastTrackPointForCache = null;
+            _trackCacheDirty = true;
+            return;
+        }
+
+        initTrackBounds(_trackPoints[0]);
+
+        var i = 1;
+        while (i < _trackPoints.size()) {
+            updateTrackBounds(_trackPoints[i]);
+            i += 1;
+        }
+
+        _lastTrackPointForCache = _trackPoints[_trackPoints.size() - 1];
         _trackCacheDirty = true;
     }
 
